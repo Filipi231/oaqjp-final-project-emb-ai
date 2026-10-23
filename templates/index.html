@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Emoções</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Detector de Emoções</h1>
+        <p>Digite um texto em inglês para descobrir a emoção expressa.</p>
+        <textarea id="textToAnalyze" rows="4" placeholder="I love my life"></textarea>
+        <button id="runButton" onclick="RunSentimentAnalysis()">Analisar</button>
+        <div id="system_response"></div>
+    </main>
+    <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
+</body>
+</html>

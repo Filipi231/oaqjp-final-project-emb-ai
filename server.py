@@ -1,8 +1,14 @@
 """Aplicação Flask para detecção de emoções."""
-from flask import Flask, request
+from flask import Flask, render_template, request
 from EmotionDetection import emotion_detector
 
 app = Flask("Emotion Detector")
+
+
+@app.route("/")
+def render_index_page():
+    """Exibe a página inicial."""
+    return render_template("index.html")
 
 
 @app.route("/emotionDetector")
